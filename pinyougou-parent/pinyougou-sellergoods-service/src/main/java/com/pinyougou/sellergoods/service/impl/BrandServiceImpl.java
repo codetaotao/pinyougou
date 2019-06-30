@@ -44,4 +44,14 @@ public class BrandServiceImpl implements BrandService {
 		}
 	}
 
+	@Override
+	public TbBrand findOne(Long id) {
+		return brandMapper.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public void update(TbBrand brand) {
+		brandMapper.updateByPrimaryKey(brand);
+	}
+
 }
